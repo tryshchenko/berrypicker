@@ -12,22 +12,22 @@ const fetchFn = ({
 	defaultCookie,
 	globalUserAgent,
 }) => async (url, multiplier, cookie, userAgent) => {
-		userAgent = userAgent || globalUserAgent || DEFAULT_USER_AGENT;
-		const time = await wait(multiplier);
-		const body = await take(url, cookie, userAgent);
-		const $ = cheerio.load(body);
+	userAgent = userAgent || globalUserAgent || DEFAULT_USER_AGENT;
+	const time = await wait(multiplier);
+	const body = await take(url, cookie, userAgent);
+	const $ = cheerio.load(body);
 
-		if (enableDebugHtml) {
-			fs.writeFileSync('./debug.html', body, 'utf-8');
-		}
-
-		return {
-			eject: () => $,
-			get: (what) => $(what),
-			gatherAttribute: gatherAttribute($),
-			gatherText: gatherText($)
-
-		}
+	if (enableDebugHtml) {
+		fs.writeFileSync('./debug.html', body, 'utf-8');
 	}
+
+	return {
+		eject: () => $,
+		get: (what) => $(what),
+		gatherAttribute: gatherAttribute($),
+		gatherText: gatherText($)
+
+	}
+}
 
 module.exports = fetchFn;

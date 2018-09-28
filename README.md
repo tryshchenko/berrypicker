@@ -19,4 +19,6 @@ I'm open for contributions. Please keep everything modular and small.
 - Add recursive folder checking
 - Write more tests
 - Write documentation
+- Proper error handling
+- Add prettier as npm script
 - Use own website for testing
