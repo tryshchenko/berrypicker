@@ -1,0 +1,16 @@
+{
+  "name": "berrypicker",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Oleksandr Tryshchenko <ensaierwa@gmail.com> (tryshchenko.com)",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "jest": "^23.6.0",
+    "request": "^2.88.0"
+  }
+}
