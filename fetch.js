@@ -26,7 +26,6 @@ const fetchFn = ({
 		get: (what) => $(what),
 		gatherAttribute: gatherAttribute($),
 		gatherText: gatherText($)
-
 	}
 }
 
